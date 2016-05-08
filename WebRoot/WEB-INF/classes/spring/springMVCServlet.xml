@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.1.xsd 
+http://www.springframework.org/schema/mvc 
+http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+    <!-- 设置注解扫描 -->
+	 <context:component-scan base-package="en.**.controller" />
+     <!-- 加载注解驱动
+       spring3.0以后以下面的代码以前的
+        <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>
+        <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>启动方式
+     -->
+	<mvc:annotation-driven />
+	 <!--对静态资源文件的访问-->
+	 <mvc:default-servlet-handler />
+	<!--  <mvc:interceptors> 
+	   <bean class="straw.common.filter.PermissionFilter"/> 
+	 </mvc:interceptors> 
+	-->
+     <!-- 视图解析器 
+             InternalResourceViewResolver:用于将逻辑上的视图解析为view对象
+             JstlView: 处理 view对象返回客户端
+                              下面的意思就是把请求返回到(prefix)/WEB-INF/jsp/下面的(suffix)XX.jsp
+          -->
+	<bean id="jspViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean> 
+
+</beans>
