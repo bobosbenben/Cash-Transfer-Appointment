@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="设置了“新增按钮”">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/controller/CashSummaryController.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/controller/CashSummaryController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="en.iws" />
@@ -102,7 +100,7 @@
       <file leaf-file-name="CashSummaryController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/app/app/controller/CashSummaryController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.10221">
+            <state vertical-scroll-proportion="2.0883977">
               <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
               <folding />
             </state>
@@ -889,8 +887,15 @@
       <workItem from="1460428254433" duration="38000" />
       <workItem from="1461211245450" duration="10208000" />
       <workItem from="1461297090572" duration="18000" />
-      <workItem from="1462615014735" duration="7095000" />
+      <workItem from="1462615014735" duration="7195000" />
     </task>
+    <task id="LOCAL-00001" summary="设置了“新增按钮”">
+      <created>1462712233642</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462712233642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -926,7 +931,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="389721000" />
+    <option name="totallyTimeSpent" value="389821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1387,7 +1392,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/app/app/controller/CashSummaryController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.10221">
+        <state vertical-scroll-proportion="2.0883977">
           <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
           <folding />
         </state>
