@@ -7,12 +7,13 @@ Ext.define('app.app.controller.CashSummaryController', {
     //设置增加一条现金预约记录
     onBtnAdd : function(btn, e) {
         var view =  this.getView();
+        //console.log(view);
         //Ext.create('app.basis.view.region.HRAddWinView',{
         Ext.create('app.app.view.MakeCashAppointmentWindow',{
-            viewModel : view.getViewModel(),
-            controller : view.getController()
+            //viewModel : view.getViewModel(),
+            //controller : view.getController()
         }).show();
-        Ext.getBody().mask();
+        //Ext.getBody().mask();
         //Ext.Msg.alert("tishi","this is a message");
     },
     onHRAddViewCancle:function(btn ,e){
