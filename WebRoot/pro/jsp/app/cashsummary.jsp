@@ -19,6 +19,7 @@
 
   <script>
     //    var actionUrl =  "sys/dd";
+    var contextPath = "<%=path%>";
     var actionUrl="app/cash/summary";
     var pageNo    = "DD";
     var detailRole = "${detailRole}";

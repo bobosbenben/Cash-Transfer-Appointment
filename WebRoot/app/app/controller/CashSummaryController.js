@@ -11,6 +11,7 @@ Ext.define('app.app.controller.CashSummaryController', {
 
         this.dialog = view.add({
             xtype: 'add-window',
+            session:true
             //viewModel : view.getViewModel(),
             //controller : view.getController()
         });
@@ -18,7 +19,38 @@ Ext.define('app.app.controller.CashSummaryController', {
 
     },
     OnSaveClick: function(){
-        Ext.Msg.alert("提示","点击了保存按钮");
+        //Ext.Msg.alert("提示","点击了保存按钮");
+        //console.log('contextPath是： '+contextPath);
+        var me = this,
+            //dialog = me.dialog,
+            form = this.lookupReference('form');
+
+        if(!form.isValid()){
+            Ext.Msg.alert("错误","请输入正确的现金预约信息");
+        }
+        else{
+            form.submit({
+                url: contextPath+'/app/cash/make',
+                //url:'en/app/cash/make',
+                method:'post',
+                success: function(form,action){
+                    //Ext.Msg.alert('成功', action.result.msg);
+                    Ext.Msg.alert('成功', '现金预约信息提交成功');
+                },
+                failure: function(form, action) {
+                    Ext.Msg.alert('失败', action.result.msg);
+                },
+                waitTitle:"请稍候",
+                waitMsg:"正在提交现金预约信息，请稍候"
+
+            });
+
+            setTimeout(
+                function(){
+                me.dialog = Ext.destroy(me.dialog);
+                },
+                500);//如果不设置timeout会报错，因为窗口还在等待返回信息就被直接销毁了。
+        }
     },
     onHRAddViewCancle:function(btn ,e){
         var win = btn.ownerCt.ownerCt.ownerCt;

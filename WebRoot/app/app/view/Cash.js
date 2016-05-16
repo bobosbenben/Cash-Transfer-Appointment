@@ -104,6 +104,7 @@ Ext.define("app.app.view.Cash",{
                         proxy:{
                             type: 'ajax',
                             url: nodesUrl,
+                            //url: 'app/getNodes',
                             reader:{
                                 type: 'json',
                                 root: 'data'
