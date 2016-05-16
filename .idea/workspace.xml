@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/controller/AppointmentSummaryController.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/controller/AppointmentSummaryController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/pro/jsp/app/summary.jsp" afterPath="$PROJECT_DIR$/WebRoot/pro/jsp/app/summary.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="en.iws" />
@@ -1076,7 +1072,7 @@
       <workItem from="1462615014735" duration="12466000" />
       <workItem from="1463186438538" duration="7296000" />
       <workItem from="1463315832194" duration="5501000" />
-      <workItem from="1463360784776" duration="12302000" />
+      <workItem from="1463360784776" duration="12355000" />
     </task>
     <task id="LOCAL-00001" summary="设置了“新增按钮”">
       <created>1462712233642</created>
@@ -1108,7 +1104,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463401862249</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="解决了大额预约中新增按钮点击弹出新增窗口的问题">
+      <created>1463406263163</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1463406263164</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1144,7 +1146,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420191000" />
+    <option name="totallyTimeSpent" value="420244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,7 +1158,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32859176" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1206,7 +1208,8 @@
     <MESSAGE value="设置了“新增按钮”" />
     <MESSAGE value="实现了点击新增按钮可以弹出窗口，解决了点击按钮出现浏览器死机的问题（不要加view.getController()）。" />
     <MESSAGE value="实现了点击新增按钮可以弹出窗口，解决了点击按钮出现浏览器死机的问题（不要加view.getController()）。&#10;&#10;点击保存按钮可以保存信息到数据库。解决了提交信息后窗口立即销毁导致死机的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了点击新增按钮可以弹出窗口，解决了点击按钮出现浏览器死机的问题（不要加view.getController()）。&#10;&#10;点击保存按钮可以保存信息到数据库。解决了提交信息后窗口立即销毁导致死机的问题" />
+    <MESSAGE value="解决了大额预约中新增按钮点击弹出新增窗口的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了大额预约中新增按钮点击弹出新增窗口的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
