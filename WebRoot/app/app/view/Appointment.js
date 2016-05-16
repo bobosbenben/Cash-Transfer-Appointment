@@ -171,7 +171,8 @@ Ext.define("app.app.view.Appointment",{
                         fields: ['name','nodeNumber'],
                         proxy:{
                             type: 'ajax',
-                            url: nodesUrl,
+                            //url: nodesUrl,
+                            url: 'app/getNodes',
                             reader:{
                                 type: 'json',
                                 root: 'data'
