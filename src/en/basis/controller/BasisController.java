@@ -247,7 +247,48 @@ public class BasisController extends GridController{
 				e.printStackTrace();
 				this.setErrorResultValue(getErrMsg(e));
 		}
-		
+
+	}
+
+	@RequestMapping("/hr/remove")
+	public void removeAppointmentSummaryData(String selectedId){
+		if(StringUtil.isEmpty(selectedId)){
+			this.setErrorResultValue("必需选择要删除的记录");
+		}
+		try{
+			SessionUser sessionuser = getSessionUser();
+			userService.remove(sessionuser,selectedId);
+			this.setResultValue("OK");
+		}catch (Exception e) {
+			e.printStackTrace();
+			this.setErrorResultValue(getErrMsg(e));
+		}
+
+		//删除相应的登录用户，在xt_loginuser表中将该用户的status修改为0
+		User user=null;
+		try {
+				user = userService.getUserById(selectedId);
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println("通过UserId获取用户的时候失败");
+			}
+
+		LoginUser loginUser =null;
+		try {
+			 loginUser = loginUserService.getLoginUserByUserId(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("通过User的id来获取登录用户LoginUser的时候失败");
+		}
+		if (loginUser!=null){
+			try{
+				SessionUser sessionUser = getSessionUser();
+				loginUserService.remove(sessionUser,loginUser.getId().toString());
+			}catch (Exception e){
+				e.printStackTrace();
+				System.out.println("删除登录用户失败，登录用户的Id是："+loginUser.getId());
+			}
+		}
 	}
 	
 	/************************hr controller   end**************************/

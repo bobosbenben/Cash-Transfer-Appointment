@@ -3,6 +3,7 @@ package en.basis.service;
 import java.util.List;
 
 import en.basisc.entity.LoginUser;
+import en.basisc.entity.User;
 import en.common.frame.shiro.SessionUser;
 import en.common.service.IGridSerivce;
 import en.common.util.helper.RoleListsEntity;
@@ -58,6 +59,13 @@ public interface ILoginUserService extends IGridSerivce{
 	 * @throws Exception
 	 */
 	public LoginUser getUserByLoginName(String loginName,String gsDm) throws Exception;
+
+	/**
+	 * 根据用户(其实是Id)获取登陆用户
+	 * @param user
+	 * @throws Exception
+	 */
+	public LoginUser getLoginUserByUserId(User user) throws Exception;
 
 //	/**
 //	 * 添加登陆用户 角色

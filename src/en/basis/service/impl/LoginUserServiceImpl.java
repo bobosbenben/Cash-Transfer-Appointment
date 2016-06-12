@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import en.basisc.entity.User;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Service;
@@ -63,7 +64,19 @@ public class LoginUserServiceImpl extends GridServiceImpl implements ILoginUserS
 				   }
 	}
 
-	
+	public void remove(SessionUser sessionUser,String selectedId) throws Exception{
+
+		System.out.println("login user 调用删除方法");
+		//更新rolemenu
+		selectedId = StringUtil.realStr(selectedId);
+		//String rolemenusql = "delete from xt_rolemenu where roleid  in("+selectedId+")";
+		//gridDao.executeSql(rolemenusql);
+		//更新role
+		//String menusql = "delete from xt_role where tid in("+selectedId+")";
+		//gridDao.updateSql(menusql);
+		super.remove(sessionUser, selectedId);
+	}
+
 	/*public ResultEntity updateLoginUserStoreLimits(String selectedId,
 			String storeString, SessionUser sessionuser) throws Exception {
 		ResultEntity re = createResultEntity();
@@ -130,7 +143,20 @@ public class LoginUserServiceImpl extends GridServiceImpl implements ILoginUserS
 					return (LoginUser)list.get(0);
 				   
 	}
-	
+
+	@Override
+	public LoginUser getLoginUserByUserId(User user) throws Exception {
+
+		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(getCopyBean().getEntityClass());
+		detachedCriteria.add(Restrictions.sqlRestriction(" user_id ='"+user.getId()+"' and status = 1"));
+		//detachedCriteria.add(Restrictions.like("gsDm", gsDm));
+		List<?> list =   gridDao.find(detachedCriteria);
+		if(ListUtil.isEmpty(list))
+			return null;
+		else
+			return (LoginUser)list.get(0);
+	}
+
 	@Override
 	public List<RoleListsEntity> getDetailMenus(LoginUser luser,String gsDm) throws Exception {
 		  List<RoleListsEntity> listrole = new ArrayList<RoleListsEntity>();

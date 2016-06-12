@@ -50,6 +50,8 @@ Ext.define('app.basis.model.HRModel', {
 			   
 					/** **********gridcenter*************** */
 					 tc_title:'信息',
+					 tc_isDeleteData:true,
+					 tc_gridseltype:'rowmodel',
 						tc_checkFields:[{
 										test : 'dept',
 										name : '部门'

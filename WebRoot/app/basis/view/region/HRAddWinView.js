@@ -70,7 +70,7 @@ Ext.define('app.basis.view.region.HRAddWinView', {
 									fieldLabel : "所属部门<font color='red'>*</font>",
 									labelWidth : 70,
 									valueField:'name',
-									multiSelect:true,
+									//multiSelect:true,
 									//forceSelection:true,
 									anchor : '90%',
 									dataname : 'ListCompanysCache',
@@ -254,6 +254,7 @@ Ext.define('app.basis.view.region.HRAddWinView', {
 					xtype : 'fieldset',
 					title : '个人信息',
 					collapsible : true,
+					collapsed:true,
 					width : 780,
 					layout : 'column',
 					items : [{
@@ -430,7 +431,7 @@ Ext.define('app.basis.view.region.HRAddWinView', {
 					width : 780,
 					id : 'relationloginfieldset',
 					layout : 'anchor',
-					collapsed : true,
+					collapsed : false,
 					checkboxToggle : true,
 					items : [{
 								xtype : 'textfield',
@@ -456,6 +457,7 @@ Ext.define('app.basis.view.region.HRAddWinView', {
 											columnWidth : 0.6,
 											xtype : 'checkbox',
 											inputValue : true,
+											checked: true,
 											name : 'relationLogin',
 											boxLabel : "以此做为用户登陆<font color='red'>(勾选后将自动创建一个角色为空的登陆用户)</font>"
 										}]

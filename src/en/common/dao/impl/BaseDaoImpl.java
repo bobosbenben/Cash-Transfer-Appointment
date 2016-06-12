@@ -99,7 +99,7 @@ public abstract class BaseDaoImpl {
 
 		  //System.out.println("修改前：status: "+en.getStatus()+"  修改人代码："+en.getXgrDm());
 
-		  en.setStatus(false); 
+		  en.setStatus(false);
 		  en.setXgrDm(su.getId());
 		  en.setXgrq(DatetimeUtil.getCurrentDateTimeString());
 		  getSession().update(en);

@@ -2,6 +2,7 @@ package en.basis.service.impl;
 
 import java.util.List;
 
+import en.common.util.helper.StringUtil;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
@@ -116,6 +117,19 @@ public class UserServiceImpl extends GridServiceImpl implements IUserService{
 		return gridDao.find(detachedCriteria);
 	}
 
+	public void remove(SessionUser sessionUser,String selectedId) throws Exception{
+
+		//System.out.println("调用删除方法");
+		//更新rolemenu
+		selectedId = StringUtil.realStr(selectedId);
+		//String rolemenusql = "delete from xt_rolemenu where roleid  in("+selectedId+")";
+		//gridDao.executeSql(rolemenusql);
+		//更新role
+		//String menusql = "delete from xt_role where tid in("+selectedId+")";
+		//gridDao.updateSql(menusql);
+		super.remove(sessionUser, selectedId);
+	}
+
 	@Override
 	public String getHRInfoById(String selected) throws Exception {
 		User user = (User)gridDao.getById(User.class, Long.parseLong(selected));
@@ -123,6 +137,16 @@ public class UserServiceImpl extends GridServiceImpl implements IUserService{
 		return null;
 		else{
 			return JacksonsUtil.me().readAsString(user);
+		}
+	}
+
+	@Override
+	public User getUserById(String selected) throws Exception {
+		User user = (User)gridDao.getById(User.class, Long.parseLong(selected));
+		if(user == null)
+			return null;
+		else{
+			return user;
 		}
 	}
 

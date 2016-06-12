@@ -222,7 +222,6 @@ public abstract class GridServiceImpl extends BaseServiceImpl{
 					BaseEntity obj = (BaseEntity)gridDao.getById(getCopyBean().getEntityClass(), Long.parseLong(str));
 					if(obj !=null){ //System.out.println("找到了一个对象：status:"+obj.getStatus()+"  Id:"+obj.getId());
 						gridDao.remove(sessionuser, obj);}
-					
 				}
 			}
 			
@@ -231,8 +230,8 @@ public abstract class GridServiceImpl extends BaseServiceImpl{
 		 * 使用hql查询分页
 		 * @param sessionuser
 		 * @param cond
-		 * @param start
-		 * @param limit
+//		 * @param start
+//		 * @param limit
 		 * @return
 		 * @throws Exception
 		 *//*
