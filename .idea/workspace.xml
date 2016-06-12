@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="修改了人事档案中无法删除用户的bug，在xt_user表中删除用户以后同时在xt_loginuser表中删除用户">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/common/service/impl/GridServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/common/service/impl/GridServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/ILoginUserService.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/ILoginUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/IUserService.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/IUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/LoginUserServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/LoginUserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/UserServiceImpl.class" />
+    <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js" afterPath="$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="en.iws" />
@@ -42,11 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BasisController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasisController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/en/basis/controller/BasisController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.038869258">
-              <caret line="266" column="50" selection-start-line="266" selection-start-column="50" selection-end-line="266" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="281" column="9" selection-start-line="281" selection-start-column="9" selection-end-line="281" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/CompanyModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="72" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LUserModel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.3180212">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -187,7 +203,6 @@
         <option value="$PROJECT_DIR$/test/TestBase64.java" />
         <option value="$PROJECT_DIR$/WebRoot/app/app/model/AppointmentSummaryModel.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/module/view/GridBillModule.js" />
-        <option value="$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/module/view/SearchFormModule.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/basis/model/CompanyModel.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/basis/view/region/HRAddWinView.js" />
@@ -199,6 +214,7 @@
         <option value="$PROJECT_DIR$/src/en/basis/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/en/basis/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/en/basis/controller/BasisController.java" />
+        <option value="$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js" />
       </list>
     </option>
   </component>
@@ -1380,7 +1396,7 @@
       <workItem from="1464697903947" duration="16000" />
       <workItem from="1465176620458" duration="13427000" />
       <workItem from="1465344296045" duration="529000" />
-      <workItem from="1465344847809" duration="19223000" />
+      <workItem from="1465344847809" duration="20118000" />
     </task>
     <task id="LOCAL-00001" summary="设置了“新增按钮”">
       <created>1462712233642</created>
@@ -1430,7 +1446,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465700284309</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改了人事档案中无法删除用户的bug，在xt_user表中删除用户以后同时在xt_loginuser表中删除用户">
+      <created>1465700447441</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1465700447441</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1466,7 +1488,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455768000" />
+    <option name="totallyTimeSpent" value="456663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1488,7 +1510,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5141563" sideWeight="0.50214136" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842582" sideWeight="0.49785867" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31596828" sideWeight="0.49357602" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28652322" sideWeight="0.49357602" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30577576" sideWeight="0.49785867" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7110333" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250283" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
@@ -1681,22 +1703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0807174">
           <caret line="458" column="42" selection-start-line="458" selection-start-column="42" selection-end-line="458" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/CompanyModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1939,8 +1945,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/en/basis/controller/BasisController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038869258">
-          <caret line="266" column="50" selection-start-line="266" selection-start-column="50" selection-end-line="266" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="281" column="9" selection-start-line="281" selection-start-column="9" selection-end-line="281" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/CompanyModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3180212">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
           <folding />
         </state>
       </provider>

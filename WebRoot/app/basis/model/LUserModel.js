@@ -27,7 +27,8 @@ Ext.define('app.basis.model.LUserModel', {
 			         tn_searchfields : [Ext.create('app.module.view.CacheComboModule', {
 											name : "gsdm",
 											fieldLabel : "公司",
-											dataname:'ListHsCompanysAndJTCache'
+											//dataname:'ListHsCompanysAndJTCache'
+						 					dataname:'ListCompanysCache'
 										}),Ext.create('app.module.view.LocalComboModule',{
 								            name : "status",
 											fieldLabel : "启用标志",
