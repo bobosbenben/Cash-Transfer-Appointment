@@ -75,4 +75,5 @@ public interface ILoginUserService extends IGridSerivce{
 //	 * @throws Exception
 //	 */
 //	public void updateLoginUserRole(String roleString,SessionUser sessionuser) throws Exception;
+	public LoginUser getLoginUserByLoginName(String loginName) throws Exception;
 }

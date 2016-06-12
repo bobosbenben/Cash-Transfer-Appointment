@@ -141,7 +141,16 @@ public class LoginUserServiceImpl extends GridServiceImpl implements ILoginUserS
 					return null;
 				else
 					return (LoginUser)list.get(0);
-				   
+	}
+
+	public LoginUser getLoginUserByLoginName(String loginName) throws Exception{
+		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(getCopyBean().getEntityClass());
+		detachedCriteria.add(Restrictions.sqlRestriction(" login_account ='"+loginName+"' and status = 1"));
+		List<?> list =   gridDao.find(detachedCriteria);
+		if(ListUtil.isEmpty(list))
+			return null;
+		else
+			return (LoginUser)list.get(0);
 	}
 
 	@Override

@@ -33,7 +33,7 @@ public class IAppointmentServiceImpl extends GridServiceImpl implements IAppoint
             bill = (BaseEntity)gridDao.getById(cb.getEntityClass(), dto.getId());
         }
         cb.copyDTO2Entity(sessionuser, bill, dto);
-        gridDao.save(bill);
+        gridDao.save(bill); //gridDao会自动根据bill的类型选择相应的Entity来进行表操作
         re.setResultType(0);
     }
 

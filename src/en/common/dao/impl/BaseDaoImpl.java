@@ -55,45 +55,45 @@ public abstract class BaseDaoImpl {
 		Query query = getSession().createSQLQuery(sql); 
 		return query.list(); 
 	}
-	/*
-	 * public <T> void add(T obj) { getSession().save(obj); }
-	 *
-	 * public <T> void update(T obj) {
-	 *
-	 * getSession().update(obj); }
-	 *
-	 *
-	 *
-	 * public <T> void delete(T obj) {
-	 *
-	 * getSession().delete(obj); }
-	 *
-	 * public Object get(Class<?> classz, Serializable id) {
-	 *
-	 * return getSession().get(classz, id); }
-	 *
-	 *
-	 *
-	 * public List<?> findForLimit(DetachedCriteria detachedCriteria,int limit)
-	 * throws Exception{ Criteria criteria =
-	 * detachedCriteria.getExecutableCriteria(getSession());
-	 * criteria.setMaxResults(limit); return criteria.list(); }
-	 *
-	 *
-	 *
-	 *
-	 *
-	 * public List<?> gets(Class<?> clazz, String condition) { String
-	 * queryClassName; if (clazz == null) queryClassName =
-	 * this.getClass().getName(); else queryClassName = clazz.getName();
-	 *
-	 * if (condition.indexOf("status") < 0) { condition = " & status<>'0' " +
-	 * condition; } String hqlCondition =
-	 * HibernateCondition.getRealCondition(condition); List<?> results = null;
-	 * try { Query query = getSession().createQuery( "From " + queryClassName +
-	 * " o where 0=0 " + hqlCondition); results = query.list(); } catch
-	 * (Exception e) { e.printStackTrace(); } return results; }
-	 * */
+//	/*
+//	 * public <T> void add(T obj) { getSession().save(obj); }
+//	 *
+//	 * public <T> void update(T obj) {
+//	 *
+//	 * getSession().update(obj); }
+//	 *
+//	 *
+//	 *
+//	 * public <T> void delete(T obj) {
+//	 *
+//	 * getSession().delete(obj); }
+//	 *
+//	 * public Object get(Class<?> classz, Serializable id) {
+//	 *
+//	 * return getSession().get(classz, id); }
+//	 *
+//	 *
+//	 *
+//	 * public List<?> findForLimit(DetachedCriteria detachedCriteria,int limit)
+//	 * throws Exception{ Criteria criteria =
+//	 * detachedCriteria.getExecutableCriteria(getSession());
+//	 * criteria.setMaxResults(limit); return criteria.list(); }
+//	 *
+//	 *
+//	 *
+//	 *
+//	 *
+//	 * public List<?> gets(Class<?> clazz, String condition) { String
+//	 * queryClassName; if (clazz == null) queryClassName =
+//	 * this.getClass().getName(); else queryClassName = clazz.getName();
+//	 *
+//	 * if (condition.indexOf("status") < 0) { condition = " & status<>'0' " +
+//	 * condition; } String hqlCondition =
+//	 * HibernateCondition.getRealCondition(condition); List<?> results = null;
+//	 * try { Query query = getSession().createQuery( "From " + queryClassName +
+//	 * " o where 0=0 " + hqlCondition); results = query.list(); } catch
+//	 * (Exception e) { e.printStackTrace(); } return results; }
+//	 * */
 	  public void remove(SessionUser su,final Object entity) throws Exception {
 		  BaseEntity en = (BaseEntity) entity;
 

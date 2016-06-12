@@ -76,12 +76,13 @@ public class loginController extends BaseController {
 		if (StringUtil.isEmpty(loginName) || StringUtil.isEmpty(password))
 			errorCode = "请提供有效的用户名及密码!";
 		else {
-			if (StringUtil.isEmpty(veriCode)) 
-				errorCode = "请从首页重新登陆，输入完整用户、密码以及验证码!";
-			else{
-				if (!veriCode.equals(yzm)) 
-					errorCode = "验证码错误，请重新登陆!";
-				else{
+//			if (StringUtil.isEmpty(veriCode))
+//				errorCode = "请从首页重新登陆，输入完整用户、密码以及验证码!";
+//			else{
+//				if (!veriCode.equals(yzm))
+//					errorCode = "验证码错误，请重新登陆!";
+//				else{
+
 					/**********处理其他业务**********/
 					try { 
 					/*************** 检测注册文件 ***************/
@@ -89,6 +90,10 @@ public class loginController extends BaseController {
 					/*********************** 检测登陆用户 **********************/
 					UsernamePasswordToken token = new UsernamePasswordToken(
 							loginName, new Base64().encode64(password));
+
+					//直接从后台获取到用户的公司代码，通过用户名(login_account)在xt_loginuser表中获取
+					LoginUser loginUser = loginUserService.getLoginUserByLoginName(loginName);
+					gsDm = new String(loginUser.getGsDm());
 					//因系统采用公司代码权限,故此处将公司代码存于host属性
 					token.setHost(gsDm);
 					token.setRememberMe(true);
@@ -103,7 +108,9 @@ public class loginController extends BaseController {
 						 * 处理sessionUser
 						 */
 						LoginUser luser = loginUserService.getUserByLoginNamePassword(currentUser.getPrincipal().toString(), password, gsDm);
-						
+
+						//gsDm = luser.getGsDm();//这里就不去判断用户填写的机构是否正确，直接从后台取得用户的机构
+
 						Company company =companyService.getGsxxByGsDm(luser.getGsDm(), gsDm);
 						
 						SessionUser sessionUser  = new SessionUser(session.getId(), luser, gsDm, company);
@@ -179,8 +186,8 @@ public class loginController extends BaseController {
 							e.printStackTrace();
 							errorCode = e.getMessage();
 						}
-				}
-			} 
+//				}
+//			}
 		}
 		if(isSuccess)
 		  return new ModelAndView("pro/jsp/admin/main");
