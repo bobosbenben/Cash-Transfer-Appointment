@@ -41,10 +41,22 @@ Ext.define('app.module.view.GridBillModule', {
 				var sform = Ext.create('app.module.view.SearchFormModule', {
 							vm : vm
 						});
-				this.northForm = Ext.create('Ext.form.Panel', {
-					        name:'northformpanel',
-							region : 'north',
-							items : [tb, sform]
-						});
+
+				//var test=true;
+				if(vm.get('module_isSerach')){
+					this.northForm = Ext.create('Ext.form.Panel', {
+								name:'northformpanel',
+								region : 'north',
+								//items : [tb, sform]
+								items : [tb]
+					});
+				}
+				else{
+					this.northForm = Ext.create('Ext.form.Panel', {
+						name:'northformpanel',
+						region : 'north',
+						items : [tb, sform]
+					});
+				}
 			}
 		})

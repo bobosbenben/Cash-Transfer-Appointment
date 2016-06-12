@@ -7,6 +7,7 @@ Ext.define('app.basis.model.HRModel', {
 			    var datas = {
 			        module_isNorth:true,
 			        module_isWest:true,
+					module_isSerach:false,
 			        
 			         tn_otherNorthButton:[{
 											text : ' 更改更多信息 ',

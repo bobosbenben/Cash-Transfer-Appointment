@@ -7,6 +7,7 @@ Ext.define('app.basis.model.CompanyModel', {
 			    var datas = {
 			        module_isNorth:true,
 			        module_isWest:true,
+					module_isSerach:false,
 			        
 			         tn_otherNorthButton:['->',
 										{text : ' 操作指引 ',
@@ -68,9 +69,12 @@ Ext.define('app.basis.model.CompanyModel', {
 								//	dataIndex : 'gsDm'
 								//},
 						 		{
-						 			header: "网点名称",
+						 			header: "网点号",
 									width: 120,
-									dataIndex: 'nodeNumber'
+									dataIndex: 'nodeNumber',
+									field : {
+										xtype : 'textfield'
+									}
 					 			},
 						 		{
 									header : "名称",

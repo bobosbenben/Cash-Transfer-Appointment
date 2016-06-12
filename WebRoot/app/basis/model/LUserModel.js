@@ -7,6 +7,7 @@ Ext.define('app.basis.model.LUserModel', {
 			    var datas = {
 			        module_isNorth:true,
 			        module_isWest:true,
+					module_isSerach:false, //不显示搜索框，查询条件那一栏,但是这样会导致问题
 			        
 				      tn_otherNorthButton:[{
 											text : ' 设置角色权限 ',

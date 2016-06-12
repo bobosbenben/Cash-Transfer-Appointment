@@ -13,11 +13,13 @@ Ext.define('app.module.view.SearchFormModule', {
       defaults:{
       	margin: '0px 0px 5px 5px'
       },
-      items:[{
-           xtype:'textfield',
-           fieldLabel : "模糊匹配",
-           name : "anyField"
-      }],
+      items:[
+        //  {
+        //   xtype:'textfield',
+        //   fieldLabel : "模糊匹配",
+        //   name : "anyField"
+        //}
+      ],
 	 initComponent : function() {
 	 	var data = this.vm.get('tn_searchfields');
 	 	if(!isEmpty(data) && data.length >0){

@@ -8,6 +8,7 @@ Ext.define('app.app.model.AppointmentSummaryModel', {
             module_isNorth:true,
 
 
+
             tn_searchfields : [
             //    Ext.create('app.module.view.CacheComboModule', {
             //    name : "gsdm",
