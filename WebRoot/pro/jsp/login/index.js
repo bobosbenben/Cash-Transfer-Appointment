@@ -24,7 +24,8 @@ $(document).ready(function() {
 	$(document).on("keypress", "#password", function(e) {
 				if (e.keyCode == 13) {
 					e.preventDefault();
-					$("#yzm").focus();
+					//$("#yzm").focus();
+					$("#buttonLogin").focus();
 				}
 			})
 	$("#buttLogin").click(function() {
@@ -47,10 +48,11 @@ $(document).ready(function() {
 function initGsdm() {
 	var sname = GetMyCookie("cookie_userName");
 	if (sname.length >= 1) {
-		document.getElementById("loginName").value = sname;
-		document.getElementById('password').focus();
-	} else
-		document.getElementById('loginName').focus();
+		//document.getElementById("loginName").value = sname;
+		//document.getElementById('password').focus();
+	} else {
+		//document.getElementById('loginName').focus();
+	}
 };
 
 function validMachineCode() {
@@ -94,10 +96,12 @@ function check() {
 		alert("请输入你的密码！");
 		$("#password").focus();
 		return false;
-	} else if ($("#yzm").val() == null || $("#yzm").val() == "") {
-		alert("请输入验证码！");
-		$("#yzm").focus();
-	} else {
+	}
+	//else if ($("#yzm").val() == null || $("#yzm").val() == "") {
+		//alert("请输入验证码！");
+		//"#yzm").focus();
+	//}
+	else {
 		SetMyCookie("cookie_userName",
 				document.getElementById("loginName").value);
 		return true;

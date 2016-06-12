@@ -90,12 +90,12 @@ TD {
 																		action="" method="post"><!--由js动态载入地址-->
 																		<TABLE>
 																			<TBODY>
-																				<TR>
-																					<TD><LABEL>公司代码:</LABEL></TD>
-																					<TD><INPUT id=gsDm style="width:110px" size=12
-																						name=gsDm value='00001'>
-																					</TD>
-																				</TR>
+																				<%--<TR>--%>
+																					<%--<TD><LABEL>公司代码:</LABEL></TD>--%>
+																					<%--<TD><INPUT id=gsDm style="width:110px" size=12--%>
+																						<%--name=gsDm value='00001'>--%>
+																					<%--</TD>--%>
+																				<%--</TR>--%>
 																				<tr>
 																					<td><br></td>
 																				</tr>
@@ -118,17 +118,17 @@ TD {
 																				<tr>
 																					<td><br></td>
 																				</tr>
-																				<TR>
-																					<TD><LABEL> 验 证 码: </LABEL></TD>
-																					<TD class="loginTextTd"><INPUT id=yzm
-																						style="WIDTH: 40px" tabIndex=4 maxLength=4
-																						name=yzm
-																						onkeyup="this.value=this.value.replace(/\D/g,'')"
-																						>
-																						<IMG height=20
-																						src="./pro/common/jsp/captchaImageCommon.jsp"
-																						width=57 align="top" border=1></TD>
-																				</TR>
+																				<%--<TR>--%>
+																					<%--<TD><LABEL> 验 证 码: </LABEL></TD>--%>
+																					<%--<TD class="loginTextTd"><INPUT id=yzm--%>
+																						<%--style="WIDTH: 40px" tabIndex=4 maxLength=4--%>
+																						<%--name=yzm--%>
+																						<%--onkeyup="this.value=this.value.replace(/\D/g,'')"--%>
+																						<%-->--%>
+																						<%--<IMG height=20--%>
+																						<%--src="./pro/common/jsp/captchaImageCommon.jsp"--%>
+																						<%--width=57 align="top" border=1></TD>--%>
+																				<%--</TR>--%>
 																				<tr>
 																					<td><input type="hidden" name="isMobile" value="${isMobile}" /> </td>
 																				</tr>
