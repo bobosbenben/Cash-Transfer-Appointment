@@ -167,7 +167,9 @@ public class BasisController extends GridController{
 			this.gridSerivce = companyService;
 			String gsdm = null;
 			try {
+				System.out.println("name: "+headDTO.getDept());
 				gsdm = companyService.getGsxxByName(headDTO.getDept()).getGsDm();
+				System.out.println("gsdm: "+gsdm);
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.out.println("通过公司名称获取公司代码时出错");//在窗口上选择的是公司的名称，要得到公司代码存入xt_loginuser

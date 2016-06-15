@@ -402,7 +402,7 @@ public class CompanyServiceImpl extends GridServiceImpl implements ICompanyServi
 
 	public Company getGsxxByName(String name) throws Exception {
 		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(getCopyBean().getEntityClass());
-		detachedCriteria.add(Restrictions.sqlRestriction(" name ='"+name+"' and status=1"));
+		detachedCriteria.add(Restrictions.sqlRestriction(" short_name ='"+name+"' and status=1"));
 		List<?> list =   gridDao.getsCacheEntityList(detachedCriteria);
 		if(ListUtil.isEmpty(list))
 			return null;
