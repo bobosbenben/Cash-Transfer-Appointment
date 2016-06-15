@@ -64,7 +64,7 @@ Ext.define('app.app.view.MakeCashAppointmentWindow', {
                             fieldLabel: "提款日期",
                             format:"Y年m月d日",
                             //vtype: "age",
-                            emptyText:"不需非常精确",
+                            //emptyText:"不需非常精确",
                             id: "date",
                             listeners: {
                                 specialkey: function(field, e){

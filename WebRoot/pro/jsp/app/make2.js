@@ -33,7 +33,7 @@ Ext.onReady(function(){
                 xtype: "container",
                 layout: "hbox",
                 items: [
-                    { xtype: "numberfield", name: "number", fieldLabel: "金&nbsp&nbsp额", decimalPrecision: 0, vtype: "age",emptyText:"不需非常精确" },
+                    { xtype: "numberfield", name: "number", fieldLabel: "金&nbsp&nbsp额", decimalPrecision: 0, vtype: "age" },
                     { xtype: "textfield", name: "phone", fieldLabel: "联系电话", allowBlank: false, emptyText: "客户财务人员的联系电话" },
                     //{ xtype: "textfield", name: "phone", fieldLabel: "邮箱", allowBlank: false, emptyText: "Email地址", vtype: "email" }
                 ]

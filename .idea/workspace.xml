@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="892a6e73-1d86-493f-b80c-c18cbb456167" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/en/basis/controller/BasisController.java" afterPath="$PROJECT_DIR$/src/en/basis/controller/BasisController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/en/basis/service/impl/CompanyServiceImpl.java" afterPath="$PROJECT_DIR$/src/en/basis/service/impl/CompanyServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/controller/BasisController.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/controller/BasisController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/CompanyServiceImpl.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/en/basis/service/impl/CompanyServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/view/Cash.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/Cash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js" afterPath="$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/pro/jsp/app/make2.js" afterPath="$PROJECT_DIR$/WebRoot/pro/jsp/app/make2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="en.iws" />
@@ -39,43 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/login/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.25">
-              <caret line="130" column="93" selection-start-line="130" selection-start-column="93" selection-end-line="130" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/login/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="15" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
-              <folding>
-                <element signature="e#1321#1328#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BasisController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/en/basis/controller/BasisController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HRModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/HRModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="78" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -101,31 +74,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/en/basis/dto/UserDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ICompanyService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/en/basis/service/ICompanyService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CompanyServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/en/basis/service/impl/CompanyServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42756185">
-              <caret line="404" column="53" selection-start-line="404" selection-start-column="53" selection-end-line="404" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="400" column="9" selection-start-line="400" selection-start-column="9" selection-end-line="400" selection-end-column="9" />
+              <folding>
+                <element signature="e#7466#7471#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddAppointmentWindow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Appointment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cash.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/Cash.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakeCashAppointmentWindow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make2.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/app/make2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.09778598">
+              <caret line="35" column="121" selection-start-line="35" selection-start-column="121" selection-end-line="35" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -167,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebRoot/pro/jsp/app/cashsummary.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/module/view/GridCenter.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/module/controller/ControllerModule.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/app/model/CashSummaryModel.js" />
@@ -184,14 +188,10 @@
         <option value="$PROJECT_DIR$/test/test.java" />
         <option value="$PROJECT_DIR$/src/en/common/frame/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/en/common/frame/engine/AppEngine.java" />
-        <option value="$PROJECT_DIR$/WebRoot/app/app/view/Cash.js" />
-        <option value="$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js" />
         <option value="$PROJECT_DIR$/WebRoot/pro/jsp/app/cashsummary.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/app/app/controller/CashSummaryController.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/app/controller/AppointmentSummaryController.js" />
-        <option value="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" />
         <option value="$PROJECT_DIR$/WebRoot/pro/jsp/app/summary.jsp" />
-        <option value="$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js" />
         <option value="$PROJECT_DIR$/test/TestBase64.java" />
         <option value="$PROJECT_DIR$/WebRoot/app/app/model/AppointmentSummaryModel.js" />
         <option value="$PROJECT_DIR$/WebRoot/app/module/view/GridBillModule.js" />
@@ -218,6 +218,11 @@
         <option value="$PROJECT_DIR$/WebRoot/pro/jsp/login/index.jsp" />
         <option value="$PROJECT_DIR$/src/en/basis/controller/BasisController.java" />
         <option value="$PROJECT_DIR$/src/en/basis/service/impl/CompanyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js" />
+        <option value="$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js" />
+        <option value="$PROJECT_DIR$/WebRoot/app/app/view/Cash.js" />
+        <option value="$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js" />
+        <option value="$PROJECT_DIR$/WebRoot/pro/jsp/app/make2.js" />
       </list>
     </option>
   </component>
@@ -803,7 +808,7 @@
       <workItem from="1464697903947" duration="16000" />
       <workItem from="1465176620458" duration="13427000" />
       <workItem from="1465344296045" duration="529000" />
-      <workItem from="1465344847809" duration="41824000" />
+      <workItem from="1465344847809" duration="43123000" />
     </task>
     <task id="LOCAL-00001" summary="设置了“新增按钮”">
       <created>1462712233642</created>
@@ -877,7 +882,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465725393628</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="修正了在人事档案中新增登录用户后，新用户无法登录。其实是新增的用户没有公司代码gsdm，写库的时候错误了--没有读取到gsdm---用的是简称，但是检测库的时候用的是name全称。">
+      <created>1465954846630</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1465954846630</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -913,7 +924,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="478369000" />
+    <option name="totallyTimeSpent" value="479668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,7 +937,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842582" sideWeight="0.49785867" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250283" sideWeight="0.496788" order="15" side_tool="false" content_ui="tabs" />
@@ -935,7 +946,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250283" sideWeight="0.503212" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32842582" sideWeight="0.49785867" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24915062" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34767836" sideWeight="0.49357602" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30577576" sideWeight="0.49785867" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7110333" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250283" sideWeight="0.49785867" order="12" side_tool="false" content_ui="tabs" />
@@ -982,7 +993,8 @@
     <MESSAGE value="修复了登录用户中搜索条件下当中的公司显示，显示为中文名而不是代码。如果要删除用户需要到人事档案中删除该用户，在登录用户里无法删除（修改代码可以做到）" />
     <MESSAGE value="输入错误的公司代码与验证码时用户校验也可以通过。验证码屏蔽掉了，公司代码根据用户名来获取。" />
     <MESSAGE value="屏蔽掉了公司代码和验证码输入框" />
-    <option name="LAST_COMMIT_MESSAGE" value="屏蔽掉了公司代码和验证码输入框" />
+    <MESSAGE value="修正了在人事档案中新增登录用户后，新用户无法登录。其实是新增的用户没有公司代码gsdm，写库的时候错误了--没有读取到gsdm---用的是简称，但是检测库的时候用的是name全称。" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正了在人事档案中新增登录用户后，新用户无法登录。其实是新增的用户没有公司代码gsdm，写库的时候错误了--没有读取到gsdm---用的是简称，但是检测库的时候用的是name全称。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -991,46 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/CompanyModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/app/basis/model/LUserModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.71613663">
-          <caret line="401" column="0" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/sys/xtcs.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/sys/xtcs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74558306">
@@ -1418,8 +1390,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/en/basis/service/impl/CompanyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42756185">
-          <caret line="404" column="53" selection-start-line="404" selection-start-column="53" selection-end-line="404" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="400" column="9" selection-start-line="400" selection-start-column="9" selection-end-line="400" selection-end-column="9" />
+          <folding>
+            <element signature="e#7466#7471#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/AddAppointmentWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/Appointment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/Cash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/app/app/view/MakeCashAppointmentWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/pro/jsp/app/make2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09778598">
+          <caret line="35" column="121" selection-start-line="35" selection-start-column="121" selection-end-line="35" selection-end-column="121" />
           <folding />
         </state>
       </provider>

@@ -81,7 +81,7 @@ Ext.define("app.app.view.Appointment",{
                     fieldLabel: "金&nbsp&nbsp额",
                     decimalPrecision: 0,
                     //vtype: "age",
-                    emptyText:"不需非常精确",
+                    //emptyText:"不需非常精确",
                     id: "number",
                     listeners: {
                         specialkey: function(field, e){
