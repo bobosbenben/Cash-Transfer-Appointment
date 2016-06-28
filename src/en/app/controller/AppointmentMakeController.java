@@ -71,10 +71,19 @@ public class AppointmentMakeController extends GridController{
         }catch (Exception e){
             e.printStackTrace();
         }
-        adto.setDate(dateDate);
 
-        this.gridSerivce = appointmentService;
-        super.updateBillByDTO(adto);
+        Date currrentDate = new Date();
+        Date limitDate = new Date(currrentDate.getYear(), currrentDate.getMonth(), currrentDate.getDate(), 17, 30);
+        if (currrentDate.after(limitDate)) {
+            this.setResultValue("{failure:true,Msg:'请在每天下午5:30之前预约'}");
+        } else if (currrentDate.after(dateDate)) {
+            this.setResultValue("{failure:true,Msg:'支取日期应大于今天'}");
+        } else {
+            adto.setDate(dateDate);
+
+            this.gridSerivce = appointmentService;
+            super.updateBillByDTO(adto);
+        }
 
     }
 

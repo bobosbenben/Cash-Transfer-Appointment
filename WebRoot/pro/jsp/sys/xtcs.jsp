@@ -20,6 +20,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script>
 	var actionUrl =  "sys/xtcs";
 	var detailRole = "${detailRole}";
+	var listDataType = [];
+	<c:forEach  items="${dataTypeList}"  var="of">
+	listDataType.push({ value : '${of.name}' , name : '${of.name}'});
+	</c:forEach>
 	</script>
 	<style type="text/css">
 	 <%-- 解决extjs6.0 toolbar 里buttontext 中文出...号的问题   --%>
@@ -29,6 +33,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-      这里是系统参数
   </body>
 </html>

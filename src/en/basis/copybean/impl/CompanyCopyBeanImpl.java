@@ -35,7 +35,7 @@ public class CompanyCopyBeanImpl extends GridCopyBeanImpl implements ICopyBean{
 	       Company company = (Company)entity;
 	       CompanyDTO cdto = (CompanyDTO)dto;
 	       if(!StringUtil.isEmpty(company.getSjgsDm())){
-	    	   DetachedCriteria detachedCriteria = DetachedCriteria.forClass(getEntityClass());
+	    	   DetachedCriteria detachedCriteria = DetachedCriteria.forClass(getEntityClass());//确定使用哪一个Entity
 	    	   detachedCriteria.setProjection(Projections.property("shortName"));
 	    	   detachedCriteria.add(Restrictions.eq("gsDm", company.getSjgsDm()));
 	    	   detachedCriteria.add(Restrictions.eq("status", true));

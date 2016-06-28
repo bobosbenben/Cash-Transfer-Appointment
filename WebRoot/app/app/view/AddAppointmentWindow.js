@@ -453,7 +453,8 @@ Ext.define('app.app.view.AddAppointmentWindow', {
                                     Ext.Msg.alert('成功', '预约信息提交成功');
                                 },
                                 failure: function(form, action) {
-                                    Ext.Msg.alert('失败', action.result.msg);
+                                    //Ext.Msg.alert('shibaile',action.result);
+                                    Ext.Msg.alert('失败', action.result.Msg);
                                 },
                                 waitTitle:"请稍候",
                                 waitMsg:"正在提交表单数据，请稍候"

@@ -36,7 +36,9 @@ public class GridController extends BaseController{
 							+ "@@@update@@@" + (float) (System.currentTimeMillis() - start) / 1000);
 		}catch(Exception e){
 			e.printStackTrace();
-			this.setResultValue("{failure:true,Msg:\""+getErrMsg(e)+"\"}");
+			//this.setResultValue("{failure:true,Msg:\""+getErrMsg(e)+"\"}");
+			String tempString = "{failure:true,Msg:'"+getErrMsg(e)+"'}";
+			this.setResultValue(tempString);
 		}
 	} 
 //	/*

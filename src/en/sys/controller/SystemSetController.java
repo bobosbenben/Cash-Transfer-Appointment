@@ -341,6 +341,25 @@ public class SystemSetController extends GridController{
 		public ModelAndView getXtcsJsp(Model model) {
 			Subject currentUser = SecurityUtils.getSubject();
 			super.setPageCss(currentUser, model);
+
+			String str = getComRole(currentUser,"XTCS");
+			model.addAttribute("detailRole", str);
+
 			return new ModelAndView("pro/jsp/sys/xtcs");
+		}
+
+		@RequestMapping("/xtcs/update")
+		public void updateXtcsInfo(String jsonData,Model model) {
+			if(StringUtil.isEmpty(jsonData)){
+				this.setErrorResultValue("无效的数据");
+				return;
+			}
+			try{
+				dataDictionaryService.updateBill(getSessionUser(), jsonData);
+				this.setResultValue("OK");
+			}catch (Exception e) {
+				e.printStackTrace();
+				this.setErrorResultValue(getErrMsg(e));
+			}
 		}
 }
