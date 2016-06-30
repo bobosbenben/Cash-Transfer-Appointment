@@ -27,7 +27,7 @@ Ext.define('app.main.controller.MainController', {
 				 var maincenter = this.getView().down('maincenter');
 				 var id = record.id;
 				 var url = record.action;
-				 //console.log('action是：' + record.action +"   id is :"+id);
+				 console.log('action是：' + record.action +"   id is :"+id);
 				 if(!isEmpty(url)){
 					var panel = maincenter.getComponent('panel'+id);  
 					if(panel){

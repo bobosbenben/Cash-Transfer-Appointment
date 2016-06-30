@@ -108,7 +108,6 @@ public class loginController extends BaseController {
 						 * 处理sessionUser
 						 */
 						LoginUser luser = loginUserService.getUserByLoginNamePassword(currentUser.getPrincipal().toString(), password, gsDm);
-
 						//gsDm = luser.getGsDm();//这里就不去判断用户填写的机构是否正确，直接从后台取得用户的机构
 
 						Company company =companyService.getGsxxByGsDm(luser.getGsDm(), gsDm);
@@ -219,6 +218,8 @@ public class loginController extends BaseController {
 		// str = str+","+sys_menu;
 						
 		//String re = "["
+		//System.out.println("被授权的状态是： "+sub.isPermitted("APPSUMMARY:print"));
+
 		this.setResultValue("{"+str.toString()+"}");
 	}
 	

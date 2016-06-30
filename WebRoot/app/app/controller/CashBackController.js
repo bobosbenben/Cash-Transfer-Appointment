@@ -1,16 +1,16 @@
-Ext.define('app.app.controller.CashSummaryController', {
+Ext.define('app.app.controller.CashBackController', {
     extend : 'app.module.controller.ControllerModule',
-    alias : 'controller.cashsummarycontroller',
-    requires : ['app.app.view.MakeCashAppointmentWindow'],
+    alias : 'controller.cashbackcontroller',
+    requires : ['app.app.view.CashBackAppointmentWindow'],
     initComponent : function() {
         this.callParent();
     },
-    //设置增加一条现金预约记录
+    //设置增加一条现金送款预约记录
     onBtnAdd : function(btn, e) {
         var view =  this.getView();
 
         this.dialog = view.add({
-            xtype: 'add-window',
+            xtype: 'back-window',
             session:true
             //viewModel : view.getViewModel(),
             //controller : view.getController()
@@ -22,33 +22,32 @@ Ext.define('app.app.controller.CashSummaryController', {
         //Ext.Msg.alert("提示","点击了保存按钮");
         //console.log('contextPath是： '+contextPath);
         var me = this,
-            //dialog = me.dialog,
+        //dialog = me.dialog,
             form = this.lookupReference('form');
 
         if(!form.isValid()){
-            Ext.Msg.alert("错误","请输入正确的现金预约信息");
+            Ext.Msg.alert("错误","请输入正确的现金送款信息");
         }
         else{
             form.submit({
-                url: contextPath+'/app/cash/make',
+                url: contextPath+'/app/cashback/make',
                 //url:'en/app/cash/make',
                 method:'post',
                 success: function(form,action){
                     //Ext.Msg.alert('成功', action.result.msg);
-                    Ext.Msg.alert('成功', '现金预约信息提交成功');
+                    Ext.Msg.alert('成功', '现金送款信息提交成功');
                 },
                 failure: function(form, action) {
-                    //console.log("结果："+action.result.Msg);
-                    Ext.Msg.alert('失败', action.result.Msg);
+                    Ext.Msg.alert('失败', action.result.msg);
                 },
                 waitTitle:"请稍候",
-                waitMsg:"正在提交现金预约信息，请稍候"
+                waitMsg:"正在提交现金送款信息，请稍候"
 
             });
 
             setTimeout(
                 function(){
-                me.dialog = Ext.destroy(me.dialog);
+                    me.dialog = Ext.destroy(me.dialog);
                 },
                 500);//如果不设置timeout会报错，因为窗口还在等待返回信息就被直接销毁了。
         }

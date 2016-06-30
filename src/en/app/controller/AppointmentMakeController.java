@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import en.app.dto.AppointmentDTO;
 import en.app.dto.CashDTO;
 import en.app.service.IAppointmentService;
+import en.app.service.ICashBackService;
 import en.app.service.ICashService;
 import en.basis.service.ICompanyService;
 import en.common.controller.GridController;
@@ -34,6 +35,8 @@ public class AppointmentMakeController extends GridController{
     private IAppointmentService appointmentService;
     @Resource
     private ICashService cashService;
+    @Resource
+    private ICashBackService cashBackService;
     @Resource
     private ICompanyService companyService;
 
@@ -72,10 +75,11 @@ public class AppointmentMakeController extends GridController{
             e.printStackTrace();
         }
 
+        //限制在每天17:30之前做预约，且当天只能做第二天及以后时间的预约
         Date currrentDate = new Date();
         Date limitDate = new Date(currrentDate.getYear(), currrentDate.getMonth(), currrentDate.getDate(), 17, 30);
         if (currrentDate.after(limitDate)) {
-            this.setResultValue("{failure:true,Msg:'请在每天下午5:30之前预约'}");
+            this.setResultValue("{failure:true,Msg:'请在每天17:30之前预约'}");
         } else if (currrentDate.after(dateDate)) {
             this.setResultValue("{failure:true,Msg:'支取日期应大于今天'}");
         } else {
@@ -186,8 +190,17 @@ public class AppointmentMakeController extends GridController{
         }
         cdto.setDate(dateDate);
 
-        this.gridSerivce = cashService;
-        super.updateBillByDTO(cdto);
+        //限制在每天17:30之前做预约，且当天只能做第二天及以后时间的预约
+        Date currrentDate = new Date();
+        Date limitDate = new Date(currrentDate.getYear(), currrentDate.getMonth(), currrentDate.getDate(), 17, 30);
+        if (currrentDate.after(limitDate)) {
+            this.setResultValue("{failure:true,Msg:'请在每天17:30之前预约'}");
+        } else if (currrentDate.after(dateDate)) {
+            this.setResultValue("{failure:true,Msg:'支取日期应大于今天'}");
+        } else {
+            this.gridSerivce = cashService;
+            super.updateBillByDTO(cdto);
+        }
 
     }
 
@@ -259,6 +272,99 @@ public class AppointmentMakeController extends GridController{
             e.printStackTrace();
             this.setErrorResultValue(getErrMsg(e));
         }
+    }
+
+    @RequestMapping("/cashback")
+    public ModelAndView getCashBackJsp(Model model) {
+        Subject currentUser = SecurityUtils.getSubject();
+        super.setPageCss(currentUser, model);
+
+        //String str = "{ isRole : 'Y' ,tn_isToolbarAdd : false ,tn_isToolbarDel : true ,tn_isToolbarSave : true ,tn_isToolbarPrint : false ,tn_isToolbarSearch : true }";
+        String str = getComRole(currentUser,"APPCASHBACK");
+        System.out.println("role: "+str);
+        model.addAttribute("detailRole", str);
+        return new ModelAndView("pro/jsp/app/cashback");
+    }
+
+    @RequestMapping("/cashback/loaddata")
+    public void loadCashBackData(String gsdm,String date,int start,int limit,Model model) {
+
+        try{
+            String cond = "";
+            if(!StringUtil.isEmpty(gsdm)){
+                cond = cond+" and gsdm = '"+gsdm+"'";
+            }
+
+            if(!StringUtil.isEmpty(date)){
+                date = date.substring(0,10);
+                cond = cond+" and date = '"+date+"'" +"and status=true";
+            }
+
+            ResultEntity re =  cashBackService.findPageResult(getSessionUser(),cond, start, limit);
+            if(re.getResultType() == 0)
+                this.setResultValue(re.getResultDesc().toString());
+            else
+                this.setStoreErrorResult(re.getResultDesc().toString());
+
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            this.setStoreErrorResult(getErrMsg(e));
+        }
+
+    }
+
+    @RequestMapping("/cashback/remove")
+    public void removeCashBackData(String selectedId){
+        if(StringUtil.isEmpty(selectedId)){
+            this.setErrorResultValue("必需选择要删除的记录");
+        }
+        try{
+            SessionUser sessionuser = getSessionUser();
+            cashBackService.remove(sessionuser,selectedId);
+            this.setResultValue("OK");
+        }catch (Exception e) {
+            e.printStackTrace();
+            this.setErrorResultValue(getErrMsg(e));
+        }
+    }
+
+    @RequestMapping("/cashback/update")
+    public void updateCashBack(String jsonData,Model model) {
+        if(StringUtil.isEmpty(jsonData)){
+            this.setErrorResultValue("无效的数据");
+            return;
+        }
+        try{
+            cashBackService.updateBill(getSessionUser(), jsonData);
+            this.setResultValue("OK");
+        }catch (Exception e) {
+            e.printStackTrace();
+            this.setErrorResultValue(getErrMsg(e));
+        }
+    }
+
+    @RequestMapping("/cashback/make")
+    public void updateCashBack(String number, String date,String remark,String nodeNumber,String staff) {
+
+        System.out.println("金额:"+number+" 日期:"+date+" 备注:"+remark+ " 网点号:"+nodeNumber+ " 员工:"+staff);
+        CashDTO cdto = new CashDTO();
+        cdto.setNumber(Double.parseDouble(number));
+        cdto.setRemark(remark);
+        cdto.setNodeNumber(nodeNumber);
+        cdto.setStaff(staff);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+        Date dateDate = null;
+        try{
+            dateDate = sdf.parse(date);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        cdto.setDate(dateDate);
+
+        this.gridSerivce = cashBackService;
+        super.updateBillByDTO(cdto);
+
     }
 
     @RequestMapping("/getNodes")

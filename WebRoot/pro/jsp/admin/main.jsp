@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="ERP">
-	<meta http-equiv="description" content="ERP管理软件">
+	<meta http-equiv="description" content="现金、大额预约系统">
     <jsp:include page="/pro/common/frame/incGridBill.jsp"/>
     <script type="text/javascript"
 			src="<%=realPath%>main.js"></script>

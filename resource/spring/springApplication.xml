@@ -204,6 +204,20 @@
                 /basis/luser/updaterole=authc,perms[luser:update]
                 /basis/luser/getindependentrole=authc,perms[luser:search]
                 /basis/luser/updateindependentrole=authc,perms[hr:add]
+				/app/cash/make=authc,perms[APPCASHSUMMARY:add]
+				/app/make=authc,perms[APPSUMMARY:add]
+				/app/appointment=authc
+				/app/summary=authc
+				/app/summary/loaddata=authc,perms[APPSUMMARY:search]
+				/app/summary/remove=authc,perms[APPSUMMARY:del]
+				/app/summary/update=authc,perms[APPSUMMARY:update]
+				/app/cash=authc
+				/app/cash/summary=authc
+				/app/cash/summary/loaddata=authc
+				/app/cash/summary/update=authc
+				/app/cash/summary/remove=authc
+				/app/getNodes=authc
+
                 </value>  
         </property> 
     </bean> 
